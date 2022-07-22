@@ -30,7 +30,7 @@ async function updateDataAPI() {
         row_lokal = `<tr>
                         <td>` + d2[key].nama_cc + `</td>
                         <td align='right'>` + formatNumber(d2[key].harga_beli) + `</td>
-                        <td align='right'>` + formatNumber(d2[key].jumlah_cc) + `</td>
+                        <td align='right'>` + d2[key].jumlah_cc + `</td>
                         <td align='right'>` + formatNumber(d1.tickers[d2[key].nama_cc.toLowerCase()].buy) + `</td>
                         <td align='right'>` + formatNumber(String(parseInt(d2[key].jumlah_cc) * parseInt(d1
             .tickers[
@@ -39,6 +39,10 @@ async function updateDataAPI() {
             .tickers[
                 d2[key].nama_cc.toLowerCase()].buy)) - (parseInt(d2[key].jumlah_cc) * parseInt(
             d2[key].harga_beli)))) + `</td>
+                        <td align='right'>` + ((parseInt(d1.tickers[d2[key].nama_cc.toLowerCase()].buy) * 100 / parseInt(d2[key].harga_beli)) - 100) + `</td>
+                        <td align='right'>` + formatNumber(String(Math.round((parseInt(d2[key].jumlah_cc) * parseInt(d1
+            .tickers[
+                d2[key].nama_cc.toLowerCase()].buy)) / 100 * 0.51))) + `</td>
                     </tr>`
         $('#tbody_lokal').append(row_lokal);
     }
