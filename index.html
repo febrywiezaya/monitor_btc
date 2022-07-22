@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Halaman untuk memonitoring koin kripto dengan menggunakan API Indodax" />
+    <meta name="keywords" content="html, css, javascript, btc, cryptocurrency" />
+    <meta name="author" content="Febry Muhammad Taufik Brawiezaya" />
+    <!-- <meta http-equiv="refresh" content="30;"/> -->
+    <title>Monitor BTC</title>
+    <link rel="icon" href="img/bitcoin.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Meta Whatsapp -->
+    <meta property="og:title" content="Monitor BTC" />
+    <meta property="og:url" content="http://example.com/" />
+    <meta property="og:description"
+        content="Monitor bitcoin cryptocurrency lebih mudah dengan bantuan Aplikasi Monitor BTC yang dibuat oleh Febry Muhammad Taufik Brawiezaya" />
+    <meta property="og:image" content="http://example.com/img/thumb.png" />
+    <!-- Meta Whatsapp -->
+
+    <!-- DataTables -->
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <!-- JS -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <!-- CSS -->
+    <!-- DataTables -->
+
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-striped" id="tabel_lokal">
+            <thead>
+                <tr>
+                    <th>Nama Kripto</th>
+                    <th>Harga Beli</th>
+                    <th>Jumlah Kripto</th>
+                    <th>Harga Jual Sekarang</th>
+                    <th>Total</th>
+                    <th>Total Bersih</th>
+                </tr>
+            </thead>
+            <tbody id="tbody_lokal">
+            </tbody>
+        </table>
+
+        <h3 class="mt-2">
+            <p class="badge bg-dark">Update Data Dalam: <span id="timer">0</span> Detik</p>
+        </h3>
+
+        <table class="table table-striped" id="tabel">
+            <thead>
+                <tr>
+                    <th>Nama Kripto</th>
+                    <th>Harga</th>
+                    <th>Beli</th>
+                    <th>Jual</th>
+                    <th>Tertinggi 24h</th>
+                    <th>Terendah 24h</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
