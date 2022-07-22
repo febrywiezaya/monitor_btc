@@ -31,13 +31,13 @@ async function updateDataAPI() {
                         <td>` + d2[key].nama_cc + `</td>
                         <td align='right'>` + formatNumber(d2[key].harga_beli) + `</td>
                         <td align='right'>` + formatNumber(d2[key].jumlah_cc) + `</td>
-                        <td align='right'>` + formatNumber(d1.tickers[d2[key].nama_cc.toLowerCase()].sell) + `</td>
+                        <td align='right'>` + formatNumber(d1.tickers[d2[key].nama_cc.toLowerCase()].buy) + `</td>
                         <td align='right'>` + formatNumber(String(parseInt(d2[key].jumlah_cc) * parseInt(d1
             .tickers[
-                d2[key].nama_cc.toLowerCase()].sell))) + `</td>
+                d2[key].nama_cc.toLowerCase()].buy))) + `</td>
                         <td align='right'>` + formatNumber(String((parseInt(d2[key].jumlah_cc) * parseInt(d1
             .tickers[
-                d2[key].nama_cc.toLowerCase()].sell)) - (parseInt(d2[key].jumlah_cc) * parseInt(
+                d2[key].nama_cc.toLowerCase()].buy)) - (parseInt(d2[key].jumlah_cc) * parseInt(
             d2[key].harga_beli)))) + `</td>
                     </tr>`
         $('#tbody_lokal').append(row_lokal);
